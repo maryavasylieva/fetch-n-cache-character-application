@@ -1,11 +1,16 @@
-import React from 'react';
+import { Box } from "@material-ui/core";
+import CharacterCard from "./Components/Card/CharacterCard";
+import SearchField from "./Components/SearchField";
 
 const App = () => {
   return (
-    <div className="App">
-    Fetch n Cache
-    </div>
+    <Box display="flex" p={20} justifyContent="space-between">
+      <Box>
+        <SearchField />
+        <CharacterCard />
+      </Box>
+    </Box>
   );
-}
+};
 
 export default App;
