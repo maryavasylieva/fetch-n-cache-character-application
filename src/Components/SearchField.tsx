@@ -6,10 +6,7 @@ type TSearchFieldProps = {
   onSearchCharacter: (search: string) => void;
 };
 
-const SearchField: React.FC<TSearchFieldProps> = ({
-  isFetching,
-  onSearchCharacter,
-}) => {
+const SearchField = ({ isFetching, onSearchCharacter }: TSearchFieldProps) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
