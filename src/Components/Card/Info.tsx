@@ -1,5 +1,5 @@
 import { Box, Typography } from "@material-ui/core";
-import { TCharacter } from "../types/TCharacter";
+import { TCharacter } from "../../App";
 
 import Description from "./Description";
 
@@ -17,14 +17,10 @@ const Info = ({ character, error }: TCharacterInfoCard) => {
       <Description species="Type" description={type} color={"unknown"} />
       <Description
         species="Location"
-        description={location?.name ?? location?.url}
+        description={location}
         color={"unknown"}
       />
-      <Description
-        species="Origin"
-        description={origin?.url ?? origin?.name}
-        color={"unknown"}
-      />
+      <Description species="Origin" description={origin} color={"unknown"} />
       <Description species="Status" description={status} color={"unknown"} />
     </Box>
   );

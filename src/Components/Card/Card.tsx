@@ -1,7 +1,7 @@
 import { Box } from "@material-ui/core";
 
 import characterBg from "../../assets/characterBg.png";
-import { TCharacter } from "../types/TCharacter";
+import { TCharacter } from "../../App";
 import Info from "./Info";
 
 type TCharacterCardProps = {
@@ -10,11 +10,7 @@ type TCharacterCardProps = {
   error: any;
 };
 
-const Card: React.FC<TCharacterCardProps> = ({
-  isFetching,
-  character,
-  error,
-}) => {
+const Card = ({ isFetching, character, error }: TCharacterCardProps) => {
   return (
     <Box display="flex" justifyContent="">
       <Box

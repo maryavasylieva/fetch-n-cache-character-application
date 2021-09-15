@@ -2,9 +2,14 @@ import { useState } from "react";
 import axios from "axios";
 
 
-const useSearch = () => {
+type TRecord = {
+  id: string | number;
+  [key: string]: any;
+}
+
+const useSearch = <T extends TRecord>() => {
 //   const [cache, setCache] = useState({});
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<T | null>(null);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState('')
 
