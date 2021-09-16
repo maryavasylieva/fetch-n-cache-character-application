@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, CircularProgress } from "@material-ui/core";
 
 import characterBg from "../../assets/characterBg.png";
 import { TCharacter } from "../../App";
@@ -12,7 +12,7 @@ type TCharacterCardProps = {
 
 const Card = ({ isFetching, character, error }: TCharacterCardProps) => {
   return (
-    <Box display="flex" justifyContent="">
+    <Box display="flex">
       <Box
         boxShadow={4}
         borderRadius={3}
@@ -28,8 +28,7 @@ const Card = ({ isFetching, character, error }: TCharacterCardProps) => {
           alt="character bg"
         />
       </Box>
-
-      <Info character={character} error={error} />
+      {character ? <Info character={character} error={error} /> : null }
     </Box>
   );
 };
